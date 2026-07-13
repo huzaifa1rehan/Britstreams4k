@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import ChannelSearch from "./ChannelSearch";
-import { Star, ShieldCheck, Image as ImageIcon, X, ChevronRight, ChevronLeft } from "lucide-react";
+import { Star, ShieldCheck } from "lucide-react";
 
 import Image from "next/image";
 
@@ -15,14 +15,6 @@ export default function Hero() {
   ];
   
   const [currentBg, setCurrentBg] = useState(0);
-  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
-  const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
-  
-  const galleryImages = [
-    "/gallery-1.jpg",
-    "/gallery-2.jpg",
-    "/gallery-3.jpg"
-  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -92,14 +84,10 @@ export default function Hero() {
             <span style={{ color: '#fff', fontWeight: 500 }}> No freezing, no buffering. Just premium entertainment.</span>
           </p>
           
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="#pricing" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.125rem' }}>
               View UK Plans
             </Link>
-            <button onClick={() => setIsGalleryOpen(true)} className="btn btn-outline" style={{ padding: '1rem 2rem', fontSize: '1.125rem', display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-              <ImageIcon size={20} color="var(--primary)" />
-              View Gallery
-            </button>
             <div style={{ minWidth: '250px', width: '100%', maxWidth: '500px', marginTop: '1rem' }}>
               <ChannelSearch />
             </div>
@@ -139,76 +127,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      {/* Gallery Modal */}
-      {isGalleryOpen && (
-        <div style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: 'rgba(0, 0, 0, 0.9)',
-          zIndex: 9999,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '1rem'
-        }}>
-          <div style={{ position: 'relative', width: '100%', maxWidth: '1000px', aspectRatio: '16/9', background: '#000', borderRadius: '1rem', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            
-            {/* Close Button */}
-            <button 
-              onClick={() => setIsGalleryOpen(false)}
-              style={{ position: 'absolute', top: '1rem', right: '1rem', zIndex: 20, background: 'rgba(0,0,0,0.5)', border: 'none', borderRadius: '50%', padding: '0.5rem', cursor: 'pointer', color: '#fff' }}
-            >
-              <X size={24} />
-            </button>
-
-            {/* Previous Button */}
-            <button 
-              onClick={() => setCurrentGalleryIndex((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1))}
-              style={{ position: 'absolute', left: '1rem', zIndex: 20, background: 'rgba(0,0,0,0.5)', border: 'none', borderRadius: '50%', padding: '0.5rem', cursor: 'pointer', color: '#fff' }}
-            >
-              <ChevronLeft size={32} />
-            </button>
-
-            {/* Next Button */}
-            <button 
-              onClick={() => setCurrentGalleryIndex((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1))}
-              style={{ position: 'absolute', right: '1rem', zIndex: 20, background: 'rgba(0,0,0,0.5)', border: 'none', borderRadius: '50%', padding: '0.5rem', cursor: 'pointer', color: '#fff' }}
-            >
-              <ChevronRight size={32} />
-            </button>
-
-            <Image 
-              src={galleryImages[currentGalleryIndex]}
-              alt={`Gallery Image ${currentGalleryIndex + 1}`}
-              fill
-              style={{ objectFit: 'contain' }}
-            />
-            
-            {/* Dots */}
-            <div style={{ position: 'absolute', bottom: '1.5rem', display: 'flex', gap: '0.5rem', zIndex: 20 }}>
-              {galleryImages.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrentGalleryIndex(i)}
-                  style={{
-                    width: i === currentGalleryIndex ? '24px' : '8px',
-                    height: '8px',
-                    borderRadius: '4px',
-                    background: i === currentGalleryIndex ? 'var(--primary)' : 'rgba(255,255,255,0.5)',
-                    border: 'none',
-                    cursor: 'pointer',
-                    transition: 'all 0.3s ease'
-                  }}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 }
