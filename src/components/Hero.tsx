@@ -10,7 +10,7 @@ import Image from "next/image";
 export default function Hero() {
   const backgrounds = [
     "/hero-bg.png",
-    "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&q=80&w=1920", // Valid Football Player
+    "/gallery-1.jpg", // Valid Football Player
     "/hero-movies.png"
   ];
   
@@ -19,9 +19,9 @@ export default function Hero() {
   const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
   
   const galleryImages = [
-    "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&q=80&w=1920",
-    "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&q=80&w=1920",
-    "https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&q=80&w=1920"
+    "/gallery-1.jpg",
+    "/gallery-2.jpg",
+    "/gallery-3.jpg"
   ];
 
   useEffect(() => {
