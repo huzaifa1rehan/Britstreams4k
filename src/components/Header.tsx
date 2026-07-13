@@ -58,6 +58,7 @@ export default function Header() {
         {/* Mobile Toggle Button */}
         <button 
           className="show-on-mobile"
+          aria-label="Toggle mobile menu"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           style={{ background: 'transparent', border: 'none', color: '#fff', cursor: 'pointer', padding: '0.25rem' }}
         >

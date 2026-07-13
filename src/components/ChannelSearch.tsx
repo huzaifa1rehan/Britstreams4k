@@ -66,6 +66,7 @@ export default function ChannelSearch() {
                 <h3 style={{ fontSize: '1.5rem', fontWeight: 700, margin: 0 }}>Channel Search</h3>
                 <button 
                   onClick={() => setIsOpen(false)}
+                  aria-label="Close search"
                   style={{ background: 'transparent', border: 'none', color: '#a1a1aa', cursor: 'pointer' }}
                 >
                   <X size={24} />

@@ -34,8 +34,11 @@ export default function FloatingTelegram() {
     }} className="animate-fade-in">
       
       {/* Telegram Button */}
-      <button 
-        onClick={handleClick}
+      <a 
+        href={`https://t.me/${telegramHandle}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Join our Telegram channel"
         style={{
           width: '60px',
           height: '60px',
@@ -48,7 +51,8 @@ export default function FloatingTelegram() {
           justifyContent: 'center',
           boxShadow: '0 8px 25px rgba(0, 136, 204, 0.4)',
           color: '#fff',
-          transition: 'all 0.3s ease'
+          transition: 'all 0.3s ease',
+          textDecoration: 'none'
         }}
         onMouseEnter={(e) => {
           e.currentTarget.style.transform = 'scale(1.1)';
@@ -58,7 +62,7 @@ export default function FloatingTelegram() {
         }}
       >
         <Send size={28} style={{ marginLeft: '-3px', marginTop: '3px' }} />
-      </button>
+      </a>
 
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes bounce-tele {

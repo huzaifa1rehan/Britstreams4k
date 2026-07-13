@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import FloatingTelegram from "@/components/FloatingTelegram";
+import dynamic from "next/dynamic";
 import CookieBanner from "@/components/CookieBanner";
 import Script from "next/script";
+
+const FloatingWhatsApp = dynamic(() => import("@/components/FloatingWhatsApp"), { ssr: false });
+const FloatingTelegram = dynamic(() => import("@/components/FloatingTelegram"), { ssr: false });
 
 const inter = Inter({ subsets: ["latin"] });
 

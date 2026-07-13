@@ -37,8 +37,11 @@ export default function FloatingWhatsApp() {
     }} className="animate-fade-in">
       
       {/* WhatsApp Button */}
-      <button 
-        onClick={handleClick}
+      <a 
+        href={`https://wa.me/${whatsappNumber}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with us on WhatsApp"
         style={{
           width: '60px',
           height: '60px',
@@ -61,7 +64,7 @@ export default function FloatingWhatsApp() {
         }}
       >
         <MessageCircle size={32} />
-      </button>
+      </a>
 
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes bounce {
