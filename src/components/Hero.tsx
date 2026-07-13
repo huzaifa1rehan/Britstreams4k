@@ -51,7 +51,7 @@ export default function Hero() {
         zIndex: -1
       }}></div>
 
-      <div className="container animate-fade-in" style={{ position: 'relative', zIndex: 10, display: 'grid', gridTemplateColumns: '1fr', gap: '4rem', alignItems: 'center' }}>
+      <div className="container" style={{ position: 'relative', zIndex: 10, display: 'grid', gridTemplateColumns: '1fr', gap: '4rem', alignItems: 'center' }}>
         
         <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
           

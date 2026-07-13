@@ -164,7 +164,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .indicator-pulse {
-  animation: pulse 2s infinite;
+  animation: pulse 2s ease-in-out;
 }
 
 .responsive-grid {

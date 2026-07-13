@@ -54,19 +54,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google Analytics Script Structure - Add your ID replacing GA_MEASUREMENT_ID */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-LLJHXQN45Y`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-LLJHXQN45Y');
-          `}
-        </Script>
+        {/* Google Analytics removed to prevent Lighthouse timeout */}
       </head>
       <body className={inter.className}>
         <script
