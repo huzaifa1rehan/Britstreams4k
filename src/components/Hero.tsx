@@ -10,7 +10,7 @@ import Image from "next/image";
 export default function Hero() {
   const backgrounds = [
     "/hero-bg.png",
-    "/gallery-1.jpg", // Valid Football Player
+    "/hero-sports.png",
     "/hero-movies.png"
   ];
   
