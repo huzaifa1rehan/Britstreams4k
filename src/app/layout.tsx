@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import dynamic from "next/dynamic";
 import CookieBanner from "@/components/CookieBanner";
+import FloatingWidgets from "@/components/FloatingWidgets";
 import Script from "next/script";
-
-const FloatingWhatsApp = dynamic(() => import("@/components/FloatingWhatsApp"));
-const FloatingTelegram = dynamic(() => import("@/components/FloatingTelegram"));
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -91,9 +88,8 @@ export default function RootLayout({
           }}
         />
         {children}
-        <FloatingWhatsApp />
-        <FloatingTelegram />
         <CookieBanner />
+        <FloatingWidgets />
       </body>
     </html>
   );
