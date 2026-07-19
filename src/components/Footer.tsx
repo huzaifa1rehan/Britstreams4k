@@ -28,9 +28,10 @@ export default function Footer() {
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
               <li><Link href="/#features" style={{ color: 'var(--muted)', fontSize: '0.875rem', textDecoration: 'none' }}>Features</Link></li>
               <li><Link href="/#channels" style={{ color: 'var(--muted)', fontSize: '0.875rem', textDecoration: 'none' }}>Channel Lineup</Link></li>
-              <li><Link href="/setup" style={{ color: 'var(--muted)', fontSize: '0.875rem', textDecoration: 'none' }}>Setup Guides</Link></li>
-              <li><Link href="/reseller" style={{ color: 'var(--muted)', fontSize: '0.875rem', textDecoration: 'none' }}>Reseller Program</Link></li>
-              <li><Link href="/#pricing" style={{ color: 'var(--muted)', fontSize: '0.875rem', textDecoration: 'none' }}>Pricing Plans</Link></li>
+              <li><Link href="/iptv-installation-guide" style={{ color: 'var(--muted)', fontSize: '0.875rem', textDecoration: 'none' }}>Setup Guides</Link></li>
+              <li><Link href="/become-iptv-reseller" style={{ color: 'var(--muted)', fontSize: '0.875rem', textDecoration: 'none' }}>Reseller Program</Link></li>
+              <li><Link href="/iptv-installation-plans" style={{ color: 'var(--muted)', fontSize: '0.875rem', textDecoration: 'none' }}>Pricing Plans</Link></li>
+              <li><Link href="/contact-us" style={{ color: 'var(--muted)', fontSize: '0.875rem', textDecoration: 'none' }}>Contact Us</Link></li>
             </ul>
           </div>
 

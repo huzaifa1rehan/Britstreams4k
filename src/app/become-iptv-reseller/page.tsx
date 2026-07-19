@@ -12,8 +12,20 @@ export const metadata = {
 export default function ResellerPage() {
   const whatsappNumber = siteConfig.contact.whatsappNumber;
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Reseller Program | BritStream 4K IPTV",
+    "description": "Start your own profitable IPTV business in the UK. Get your own white-label panel, bulk credits, and premium 4K servers.",
+    "url": "https://www.britstreams4k.uk/become-iptv-reseller"
+  };
+
   return (
     <main style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       
       <section className="section" style={{ background: '#020202', paddingTop: '10rem', flexGrow: 1, position: 'relative', overflow: 'hidden' }}>
@@ -27,7 +39,7 @@ export default function ResellerPage() {
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem', background: 'rgba(255, 17, 0, 0.1)', padding: '0.5rem 1rem', borderRadius: '999px', border: '1px solid rgba(255, 17, 0, 0.2)' }}>
               <span style={{ color: 'var(--accent)', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '1px', textTransform: 'uppercase' }}>B2B Partnership</span>
             </div>
-            <h1 className="heading-xl" style={{ marginBottom: '1.5rem' }}>Start Your Own <br /><span style={{ color: 'var(--accent)' }}>IPTV Business</span></h1>
+            <h1 className="heading-xl" style={{ marginBottom: '1.5rem' }}>Become an <br /><span style={{ color: 'var(--accent)' }}>IPTV Reseller</span></h1>
             <p className="text-muted" style={{ fontSize: '1.25rem', maxWidth: '700px', margin: '0 auto', lineHeight: 1.8 }}>
               Join the fastest growing UK IPTV network. Get your own reseller panel, manage your own clients, and keep 100% of your profits.
             </p>
