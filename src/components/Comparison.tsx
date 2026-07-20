@@ -1,6 +1,18 @@
-import { Check, X, ShieldAlert, Zap } from "lucide-react";
+"use client";
+
+import { useState, useEffect } from "react";
+import { Check, X } from "lucide-react";
 
 export default function Comparison() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const features = [
     { name: "Monthly Cost", us: "From £10/mo", them: "£80 - £120/mo" },
     { name: "Live Channels", us: "20,000+", them: "200 - 500" },
@@ -40,8 +52,8 @@ export default function Comparison() {
           </p>
         </div>
 
-        {/* DESKTOP VIEW (TABLE) */}
-        <div className="hide-on-mobile" style={{ 
+        {!isMobile ? (
+        <div style={{ 
           maxWidth: '1000px', 
           margin: '0 auto', 
           background: 'rgba(10,10,10,0.6)',
@@ -104,9 +116,8 @@ export default function Comparison() {
             </tbody>
           </table>
         </div>
-
-        {/* MOBILE VIEW (STACKED CARDS) */}
-        <div className="show-on-mobile" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+        ) : (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
           {features.map((feature, index) => (
             <div key={index} style={{ 
               background: 'rgba(20,20,20,0.6)', 
@@ -163,6 +174,7 @@ export default function Comparison() {
             </div>
           ))}
         </div>
+        )}
 
       </div>
     </section>

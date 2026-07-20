@@ -85,7 +85,7 @@ export default function ResellerSteps() {
                 {step.num}
               </div>
 
-              <div style={{ zIndex: 1 }}>
+              <div style={{ zIndex: 1, flex: 1, minWidth: 0 }}>
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#fff', marginBottom: '0.5rem' }}>
                   {step.title}
                 </h3>

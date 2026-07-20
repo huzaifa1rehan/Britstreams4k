@@ -24,7 +24,7 @@ export default function ResellerHero() {
             <span style={{ color: '#38bdf8', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '1px', textTransform: 'uppercase' }}>Profitable B2B Opportunity</span>
           </div>
 
-          <h1 className="heading-xl" style={{ marginBottom: '1.5rem', fontSize: '3.5rem' }}>
+          <h1 className="heading-xl" style={{ marginBottom: '1.5rem', fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
             Become IPTV Reseller | <span style={{ color: '#38bdf8' }}>Get IPTV Reseller Panel UK & Earn Money</span>
           </h1>
           

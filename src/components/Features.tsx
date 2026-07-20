@@ -53,7 +53,7 @@ export default function Features() {
       
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '4rem', maxWidth: '800px', margin: '0 auto 4rem auto' }}>
-          <h2 className="heading-lg" style={{ marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
+          <h2 style={{ fontSize: 'clamp(1.5rem, 5vw, 2.5rem)', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '1px', lineHeight: 1.2 }}>
             WHY THOUSANDS OF CUSTOMERS TRUST <span style={{ color: 'var(--primary)' }}>BRITSTREAMS4K</span>
           </h2>
           <p className="text-muted" style={{ fontSize: '1.25rem' }}>
